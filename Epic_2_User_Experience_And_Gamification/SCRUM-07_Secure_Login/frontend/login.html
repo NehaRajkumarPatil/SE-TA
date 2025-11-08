@@ -1,0 +1,4 @@
+
+<html><body><h3>Login</h3><form id="l"><input name="email"/><input name="password"/><button>Login</button></form>
+<script>document.getElementById('l').onsubmit=async e=>{e.preventDefault(); const d=Object.fromEntries(new FormData(e.target).entries()); const r=await fetch('/api/auth/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)}); alert(await r.text());}</script>
+</body></html>

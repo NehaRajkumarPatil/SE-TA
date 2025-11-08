@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# System & temporary files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+desktop.ini
+
+# Coverage and test outputs
+coverage/
+test-results/
+.vscode/
+.idea/
+
+# Windows or global files accidentally scanned
+../../../../../*

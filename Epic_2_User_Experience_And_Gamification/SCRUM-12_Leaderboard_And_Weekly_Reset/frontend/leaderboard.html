@@ -1,0 +1,2 @@
+
+<html><body><h3>Leaderboard</h3><button id="l">Load</button><ul id="u"></ul><script>document.getElementById('l').onclick=async()=>{ const r=await fetch('/api/leaderboard'); const a=await r.json(); document.getElementById('u').innerHTML=a.map((x,i)=>'<li>'+ (i+1)+'. '+x.name+ ' - '+x.score +'</li>').join(''); }</script></body></html>

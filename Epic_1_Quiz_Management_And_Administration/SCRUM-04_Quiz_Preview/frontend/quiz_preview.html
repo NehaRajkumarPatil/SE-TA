@@ -1,0 +1,4 @@
+
+<html><body><h3>Quiz Preview (SCRUM-04)</h3><button id="b">Load</button><ul id="l"></ul>
+<script>document.getElementById('b').onclick=async()=>{ const r=await fetch('/api/quizzes'); const a=await r.json(); document.getElementById('l').innerHTML=a.map(q=>'<li>'+q.title+'</li>').join('');}</script>
+</body></html>

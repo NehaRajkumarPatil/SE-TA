@@ -1,0 +1,12 @@
+
+<!doctype html><html><head><meta charset="utf-8"><title>Quiz Creation</title></head><body>
+<h2>Quiz Creation (SCRUM-01)</h2>
+<form id="f"><input name="title" placeholder="Title"/><br/><input name="description" placeholder="Description"/><br/><input name="category" placeholder="Category"/><br/><input name="difficulty" placeholder="Difficulty"/><br/><button>Create</button></form>
+<script>
+document.getElementById('f').addEventListener('submit', async e=>{
+ e.preventDefault();
+ const data=Object.fromEntries(new FormData(e.target).entries());
+ const res=await fetch('/api/quizzes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...data,questions:[]})});
+ const json=await res.json(); alert('Created '+json._id);
+});
+</script></body></html>

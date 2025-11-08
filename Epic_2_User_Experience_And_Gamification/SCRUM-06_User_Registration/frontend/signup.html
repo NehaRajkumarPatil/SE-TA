@@ -1,0 +1,4 @@
+
+<html><body><h3>Signup (SCRUM-06)</h3><form id="f"><input name="name"/><input name="email"/><input name="password"/><button>Go</button></form>
+<script>document.getElementById('f').onsubmit=async e=>{e.preventDefault(); const d=Object.fromEntries(new FormData(e.target).entries()); const r=await fetch('/api/auth/register',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)}); alert(await r.text());}</script>
+</body></html>
